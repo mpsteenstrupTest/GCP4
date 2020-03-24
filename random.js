@@ -1,3 +1,8 @@
+/*
+Programmet giver en tilfældig position til et lille billede.
+random(start,slut) giver tilfældige kommatal.
+Resetter hvis mous klicket hvor baggrunden overtegner det hele.
+*/
 let img;
 
 function preload() {

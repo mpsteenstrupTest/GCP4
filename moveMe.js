@@ -1,4 +1,6 @@
-
+/*
+x-coordinaten bliver opdateret i løkken "draw" med "xCoordinat + xSpeed". Ved kant bliver farten modsatrettet med if statement.
+*/
 
 
 function setup() {

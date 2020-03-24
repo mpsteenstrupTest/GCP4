@@ -1,3 +1,6 @@
+/*
+Interaktivt hvor et billed bliver skabt hver gang musen klickes.
+*/
 function preload() {
 	img = createImg('http://mpsteenstrup.dk/FN_maal/FN1.jpg');
 	img.hide();

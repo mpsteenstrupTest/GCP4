@@ -1,3 +1,8 @@
+/*
+Variablen scene holder styr på hvilken scene vi er i. Den bliver opdateret for hvert musseklick. Det er samme liste med FN billeder som i "lister.js".
+*/
+
+
 let img;
 let list = [];
 let scene = 0;
