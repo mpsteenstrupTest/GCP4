@@ -1,6 +1,7 @@
 /*
 Programmet giver en tilfældig position til et lille billede.
 random(start,slut) giver tilfældige kommatal.
+frameRate(10) giver at draw løkken gentages 10 gange hvert sekune.
 Resetter hvis mous klicket hvor baggrunden overtegner det hele.
 */
 let img;
@@ -13,6 +14,7 @@ function preload() {
 function setup() {
 	createCanvas(windowWidth, windowHeight);
   background(91, 146, 229);
+	frameRate(10);
 }
 
 

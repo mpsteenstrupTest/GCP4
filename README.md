@@ -30,7 +30,7 @@ P5 har et godt bibliotek med [referencer](https://p5js.org/reference/), først k
 ### Arbejdsmetode
 * Arbejd ud fra et eksempel som I kan ændre i.
 * Keep it simple, nok det vigtigste råd her.
-* husk Variabelkontrol. Lav kun én ting om af gangen og kør programmet.
+* Husk Variabelkontrol. Lav kun én ting om af gangen og kør programmet.
 * Gem jeres program. Ny version hver gang noget virker.
 
 
