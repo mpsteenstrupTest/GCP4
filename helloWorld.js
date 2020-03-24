@@ -1,5 +1,9 @@
 /*
 visuel programmerings svar på hello world.
+background(rød, grøn, blå) bestemmer baggrundsfarven, 0-255.
+draw() er en uendelig løkke som kører igen og igen.
+fill(255,0,0) giver en rød.
+ellipse() giver en cirkel.
 */
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -7,6 +11,6 @@ function setup() {
 }
 
 function draw() {
-  fill(200,00,0);
+  fill(200,0,0);
   ellipse(400,400,200,200);
 }

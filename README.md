@@ -21,6 +21,11 @@ Vi bruger platformen [teddavis.org/p5live](https://teddavis.org/p5live)
 * Del url addressen og alle kan skrive.
 * Husk at gem koden ofte og gerne som forskellige versioner.
 
+### Vejledninger
+Kristian Wickmann har lavet en række videovejledninger. Han bruger et andet online værktøj, men kodningen er den samme. (KWickmann youtube)[https://www.youtube.com/channel/UCRSqTiVe7Rho95hNtd3hJBQ/videos]
+
+
+
 
 ### småprogrammer
 * helloWorld.js
