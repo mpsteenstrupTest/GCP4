@@ -13,7 +13,7 @@ Vi bruger platformen [teddavis.org/p5live](https://teddavis.org/p5live)
 * CMD  + C » copy code
 
 ### opsætning
-* I settings skal I fjerne 'Live Codint', så programmet ikke automatisk kører jeres kode. Hvis I er i gang med at lave en løkke kan det få programmet til at gå ned.
+* I settings skal I fjerne 'Live Coding', så programmet ikke automatisk kører jeres kode. Hvis I er i gang med at lave en løkke kan det få programmet til at gå ned.
 * Programmet kører i browseren og den letteste måde at gemme er at markere alt teksten og kopiere den over i en tekst editor på computeren.
 
 ### COCODING
@@ -26,3 +26,4 @@ Vi bruger platformen [teddavis.org/p5live](https://teddavis.org/p5live)
 * helloWorld.js
 * loadImage.js
 * followMe.js
+* moveMe.js
