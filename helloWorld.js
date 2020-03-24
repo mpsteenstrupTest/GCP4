@@ -1,5 +1,9 @@
+/*
+visuel programmerings svar på hello world.
+*/
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  background(0,100,200);
 }
 
 function draw() {
