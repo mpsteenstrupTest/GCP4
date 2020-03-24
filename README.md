@@ -20,3 +20,9 @@ Vi bruger platformen [teddavis.org/p5live](https://teddavis.org/p5live)
 * Start en kodesession med knappen 'COCODING'.
 * Del url addressen og alle kan skrive.
 * Husk at gem koden ofte og gerne som forskellige versioner.
+
+
+### småprogrammer
+* helloWorld.js
+* loadImage.js
+* followMe.js
