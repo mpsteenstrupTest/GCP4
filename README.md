@@ -22,7 +22,16 @@ Vi bruger platformen [teddavis.org/p5live](https://teddavis.org/p5live)
 * Husk at gem koden ofte og gerne som forskellige versioner.
 
 ### Vejledninger
-Kristian Wickmann har lavet en række videovejledninger. Han bruger et andet online værktøj, men kodningen er den samme. (KWickmann youtube)[https://www.youtube.com/channel/UCRSqTiVe7Rho95hNtd3hJBQ/videos]
+Kristian Wichmann har lavet en række videovejledninger. Han bruger et andet online værktøj, men kodningen er den samme. [KWihkmann youtube](https://www.youtube.com/channel/UCRSqTiVe7Rho95hNtd3hJBQ/videos). Kodestumperne ligger her, [github.com/kwichmann](https://github.com/kwichmann/Kreativ-Kodning)
+
+### Referencer
+P5 har et godt bibliotek med [referencer](https://p5js.org/reference/), først kommmer et eksempel og nedenunder beskrivelsen.
+
+### Arbejdsmetode
+* Arbejd ud fra et eksempel som I kan ændre i.
+* Keep it simple, nok det vigtigste råd her.
+* husk Variabelkontrol. Lav kun én ting om af gangen og kør programmet.
+* Gem jeres program. Ny version hver gang noget virker. 
 
 
 
