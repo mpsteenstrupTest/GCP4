@@ -2,7 +2,7 @@ let y = [50, 170, 120, 355, 175];
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-  background(0,200,200);
+  background(91, 146, 229);
 }
 
 

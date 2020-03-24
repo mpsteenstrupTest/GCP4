@@ -43,3 +43,5 @@ Billeder indlæses fra URLen (hjemmesideaddressen). Samling af FN billeder her `
 * loadImage.js
 * followMe.js
 * moveMe.js
+* pressedMouse.js
+* random.js

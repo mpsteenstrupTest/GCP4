@@ -4,15 +4,15 @@ let scene = 0;
 
 function preload() {
 	for (i=1;i<18;i++){
-		img = createImg('http://mpsteenstrup.dk/FN_maal/FN'+ i +'.jpg');
-	  list.push(img);
+		img = createImg('http://mpsteenstrup.dk/FN_maal/FN'+ i +'.jpg','');
 		img.hide();
+	  list.push(img);
 	}
 }
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-  background(0,200,200);
+  background(91, 146, 229);
 }
 
 

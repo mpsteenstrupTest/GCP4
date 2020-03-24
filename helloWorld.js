@@ -7,7 +7,7 @@ ellipse() giver en cirkel.
 */
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(0,100,200);
+  background(91, 146, 229);
 }
 
 function draw() {
