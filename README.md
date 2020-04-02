@@ -1,16 +1,8 @@
 # GCP4 - INNOVATION OG PROGRAMMERING
 
+
+
 Vi bruger platformen [teddavis.org/p5live](https://teddavis.org/p5live)
-
-
-### SHORTCUTS
-* CTRL + enter » run code
-* CTRL + E » editor toggle
-* CTRL + M » menu toggle
-* CTRL + - » decrease fontsize
-* CTRL + + » increase fontsize
-* CMD  + A » mark all code
-* CMD  + C » copy code
 
 ### opsætning
 * I settings skal I fjerne 'Live Coding', så programmet ikke automatisk kører jeres kode. Hvis I er i gang med at lave en løkke kan det få programmet til at gå ned.
@@ -33,15 +25,29 @@ P5 har et godt bibliotek med [referencer](https://p5js.org/reference/), først k
 * Husk Variabelkontrol. Lav kun én ting om af gangen og kør programmet.
 * Gem jeres program. Ny version hver gang noget virker.
 
+### SHORTCUTS
+* CTRL + enter » run code
+* CTRL + E » editor toggle
+* CTRL + M » menu toggle
+* CTRL + - » decrease fontsize
+* CTRL + + » increase fontsize
+* CMD  + A » mark all code
+* CMD  + C » copy code
+
 
 ### Billeder
-Billeder indlæses fra URLen (hjemmesideaddressen). Samling af FN billeder her `http://mpsteenstrup.dk/FN_maal/FN1.jpg`, FN2, FN3 osv.
+Billeder indlæses fra URLen (hjemmesideaddressen). Samling af FN billeder her:
+
+ `http://mpsteenstrup.dk/FN_maal/FN1.jpg`
+
+  , FN2, FN3 osv.
 
 
 ### småprogrammer
-* helloWorld.js
-* loadImage.js
-* followMe.js
-* moveMe.js
-* pressedMouse.js
-* random.js
+
+* [helloWorld](programmer/helloWorld.js)
+* [loadImage](programmer/loadImage.js)
+* [followMe](programmer/followMe.js)
+* [moveMe](programmer/moveMe.js)
+* [pressedMouse](programmer/pressedMouse.js)
+* [random](programmer/random.js)
