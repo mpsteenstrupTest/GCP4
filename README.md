@@ -40,7 +40,7 @@ Billeder indlæses fra URLen (hjemmesideaddressen). Samling af FN billeder her:
 
  `http://mpsteenstrup.dk/FN_maal/FN1.jpg`
 
-  , FN2, FN3 osv.
+I kan få de andre billeder ved at skifte `FN1`ud med `FN2`, `FN3` osv.
 
 
 ### småprogrammer
