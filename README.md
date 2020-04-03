@@ -46,6 +46,7 @@ I kan få de andre billeder ved at skifte `FN1`ud med `FN2`, `FN3` osv.
 ### småprogrammer
 Små programmer som I kan bruge i jeres egne programmer.
 
+* [introduktion](programmer/introduktion.js)
 * [helloWorld](programmer/helloWorld.js)
 * [loadImage](programmer/loadImage.js)
 * [followMe](programmer/followMe.js)
