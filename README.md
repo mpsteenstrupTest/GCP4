@@ -54,5 +54,5 @@ Små programmer som I kan bruge i jeres egne programmer.
 * [pressedMouse](programmer/pressedMouse.js)
 * [random](programmer/random.js)
 * [matematik](programmer/matematik.js)
-* [lister](pogrammer/lister.js)
+* [lister](programmer/lister.js)
 * [loekker](programmer/loekker.js)
