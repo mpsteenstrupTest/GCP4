@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>e0jn9</title>
+	<meta charset="utf-8">
+	<!-- Compiled w/ P5LIVE, http://github.com/ffd8/p5live -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+	<style type="text/css">
+		body{
+			margin:0;
+			overflow:hidden;
+		}
+		canvas{
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:-1;
+			width:100vw;
+			height:100vh;
+			margin:0;
+		}
+	</style>
+	<script type="text/javascript">
+		// eco-mode = only render if window focused
+		window.onblur = function () {
+			noLoop()
+		}
+		window.onfocus = function () {
+			loop();
+		}
+	</script>
+<script type="text/javascript">
+//e0jn9
+
+function setup() {
+  createCanvas( window.innerWidth, window.innerHeight);
+  background(0);
+}
+
+function draw() {
+  fill(200,mouseX,mouseY);
+  ellipse(mouseX,mouseY,20,200);
+  textFont("monospace",100);
+  fill(0);
+  text("GCP4 - Innovation, Programmering og Verdensmål",200,200,1000,600);
+}
+
+
+/* CUSTOM FUNCTIONS FOR P5LIVE */
+// keep fullscreen if window resized
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+// custom ease function
+function ease(iVal, oVal, eVal){
+	return oVal += (iVal - oVal) * eVal;
+}
+
+// processing compatibility
+function println(msg){
+	print(msg);
+}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
