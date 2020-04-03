@@ -56,4 +56,4 @@ Små programmer som I kan bruge i jeres egne programmer.
 * [matematik](programmer/matematik.js)
 * [lister](programmer/lister.js)
 * [loekker](programmer/loekker.js)
-* [programmer/skiftScene](programmer/skiftScene.js)
+* [skiftScene](programmer/skiftScene.js)
