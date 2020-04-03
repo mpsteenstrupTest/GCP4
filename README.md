@@ -56,9 +56,4 @@ Små programmer som I kan bruge i jeres egne programmer.
 * [matematik](programmer/matematik.js),  [video](https://youtu.be/VVzZLOgQYD0)
 * [lister](programmer/lister.js), [video](https://youtu.be/fODA4OegBoQ)
 * [loekker](programmer/loekker.js), [video](https://youtu.be/Adri3AgWBA8)
-
-[skiftScene](programmer/skiftScene.js),|[video](https://youtu.be/NLR-o1YDO0E)
---- | ---:
-hej   | dig
-1     | 3
-22    | 9
+* [skiftScene](programmer/skiftScene.js),[video](https://youtu.be/NLR-o1YDO0E)
