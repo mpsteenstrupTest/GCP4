@@ -1,5 +1,5 @@
 let img;
-let list = []
+let list = [];
 
 function preload() {
 	for (i=1;i<18;i++){
