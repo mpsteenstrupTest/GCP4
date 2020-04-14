@@ -4,6 +4,9 @@
 
 Vi bruger platformen [teddavis.org/p5live](https://teddavis.org/p5live)
 
+
+[Introduktionsvideo til P5live](https://youtu.be/2UyLpdzFQM0?list=PL7kocC-_L74Kbk81pkcXVTG4w8X1syzqR)
+
 ### opsætning
 * I settings skal I fjerne 'Live Coding', så programmet ikke automatisk kører jeres kode. Hvis I er i gang med at lave en løkke kan det få programmet til at gå ned.
 * Programmet kører i browseren og den letteste måde at gemme er at markere alt teksten og kopiere den over i en tekst editor på computeren.
