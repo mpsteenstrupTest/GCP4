@@ -11,6 +11,10 @@ function setup() {
   background(91, 146, 229);
 }
 
+function draw(){
+	
+}
+
 function mousePressed() {
   image(img,mouseX,mouseY,60,60);
 }
