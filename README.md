@@ -68,4 +68,4 @@ For at få jeres programmer samlet på en fælles webside skal I eksportere jere
 
 I skal svare på  [spørgeskemaet](https://forms.gle/6k9dzAQkufRwM1TLA) hvor I uploader jeres fil.
 
-I kan se jeres program og de andres på [https://mpsteenstrup.github.io/GCP4/](https://mpsteenstrup.github.io/GCP4/)
+I kan se jeres og de andres programmer på [https://mpsteenstrup.github.io/GCP4/](https://mpsteenstrup.github.io/GCP4/)
