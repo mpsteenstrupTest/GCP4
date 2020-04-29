@@ -60,3 +60,12 @@ Små programmer som I kan bruge i jeres egne programmer.
 * [lister](programmer/lister.js), [video](https://youtu.be/fODA4OegBoQ)
 * [loekker](programmer/loekker.js), [video](https://youtu.be/Adri3AgWBA8)
 * [skiftScene](programmer/skiftScene.js),[video](https://youtu.be/NLR-o1YDO0E)
+
+
+## Deling af jeres programmer
+For at få jeres programmer samlet på en fælles webside skal I eksportere jeres programmer som html fil.
+![eksporter som HTML](eksportHtml.png)
+
+I skal svare på  [spørgeskemaet](https://forms.gle/6k9dzAQkufRwM1TLA) hvor I uploader jeres fil.
+
+I kan se jeres program og de andres på [https://mpsteenstrup.github.io/GCP4/](https://mpsteenstrup.github.io/GCP4/)
