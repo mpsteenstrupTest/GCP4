@@ -36,6 +36,7 @@ P5 har et godt bibliotek med [referencer](https://p5js.org/reference/), først k
 * CTRL + + » increase fontsize
 * CMD  + A » mark all code
 * CMD  + C » copy code
+* CMD  + P » pause program
 
 
 ### Billeder
