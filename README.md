@@ -1,5 +1,7 @@
 # GCP4 - INNOVATION OG PROGRAMMERING
 
+## private noter
+Her kan man skrive alt muligt som ikke kommer så mange ved.
 
 
 Vi bruger platformen [teddavis.org/p5live](https://teddavis.org/p5live), hvor I kan skrive kode samtidigt i samme dokument. 
