@@ -1,5 +1,6 @@
 # GCP4 - INNOVATION OG PROGRAMMERING
 
+# jeg vil altså skrive noget.....
 
 Vi bruger platformen [teddavis.org/p5live](https://teddavis.org/p5live), hvor I kan skrive kode samtidigt i samme dokument. 
 
