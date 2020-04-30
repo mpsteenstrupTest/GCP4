@@ -2,7 +2,7 @@
 
 
 
-Vi bruger platformen [teddavis.org/p5live](https://teddavis.org/p5live)
+Vi bruger platformen [teddavis.org/p5live](https://teddavis.org/p5live), hvor I kan skrive kode samtidigt i samme dokument. 
 
 
 [Introduktionsvideo til P5live](https://youtu.be/2UyLpdzFQM0?list=PL7kocC-_L74Kbk81pkcXVTG4w8X1syzqR)
