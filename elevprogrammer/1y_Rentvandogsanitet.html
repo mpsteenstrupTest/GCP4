@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aivx2</title>
+	<meta charset="utf-8">
+	<!-- Compiled w/ P5LIVE, http://github.com/ffd8/p5live -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+	<style type="text/css">
+		body{
+			margin:0;
+			overflow:hidden;
+		}
+		canvas{
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:-1;
+			width:100vw;
+			height:100vh;
+			margin:0;
+		}
+	</style>
+	<script type="text/javascript">
+		// eco-mode = only render if window focused
+		window.onblur = function () {
+			noLoop()
+		}
+		window.onfocus = function () {
+			loop();
+		}
+	</script>
+<script type="text/javascript">
+//aivx2
+
+function setup() {
+	createCanvas(windowWidth, windowHeight);
+textSize(32);
+
+
+}
+var y = 0;
+var poing = 0;
+
+
+
+
+function draw(){ 
+background('#fae')
+noStroke();
+
+fill(148, 251, 255);
+triangle(913, y-50, 1087, y-50, 1000, y-175)
+fill(148, 251, 255);
+ellipse(1000,y,200,200)
+
+triangle(13, y-250, 187, y-250, 100, y-375)
+ellipse(100,y-200,200,200)
+
+fill(148, 251, 255);
+triangle(413, y-550, 587, y-550,500, y-675)
+ellipse(500,y-500,200,200)
+
+
+fill(148, 251, 255);
+triangle(1163, y-850, 1337, y-850, 1250, y-975)
+ellipse(1250,y-800,200,200)
+
+fill(148, 251, 255);
+triangle(113, y-1250, 287, y-1250, 200, y-1375)
+ellipse(200,y-1200,200,200)
+
+y=y+10;
+if (y>2000){
+	y=0;	
+}
+
+fill(1,2,3);
+if (poing==5){
+	text('780.000.000 mennesker i verden har ikke adgang til rent vand.',300,300);
+}
+
+if (poing==10){
+	text('Børn og voksne kan nøjes med 5 liter vand til at drikke og lave mad i hver dag.',100,300);
+}
+if (poing==15){
+	text(' Til sammenligning bruger vi i Danmark omkring 100 liter vand om dagen hver.',100,300);
+}
+if (poing==20){
+	text(' 1,8 milliarder flere mennesker i verden har vand i dag end i år 2000.',100,300);
+}
+
+if (poing==25){
+	text('Det skønnes, at 300 millioner afrikanere ikke har adgang til rent drikkevand, og kun fem procent af den afrikanske agerjord får vand.',0,300);
+}
+if (poing==30){
+	text('Hvis vandet ikke er rent eller renset, kan man blive syg af de bakterier og parasitter: Guineaorm, Kolera, Diarré.',0,300);
+}
+if (poing==35){
+	text('UNICEF har de fra 2014 til 2018 hjulpet over 100 millioner mennesker med at få adgang til vand, sanitet og hygiejne.',100,300);
+}
+if (poing==40){
+	text('Hele verdens gennemsnits renlighed er 89,6% i 2017, fn´s verdens mål er 100%.',100,300);
+}
+if (poing==45){
+	text('den laveste land er Chad som har en renligheds procent på 38,7%',100,300);
+}
+if (poing==50){
+	text('I år 2000 var gennemsnitet på 80,44%, hvor det laveste land var  Etiopien som havde en renligheds procent på 18,7%',0,300);
+}
+if (poing>51){
+	poing=0;
+}
+fill(1,2,3);
+
+text(poing,500,400);
+console.log(poing);	
+}
+
+
+
+
+
+function mousePressed(){
+	if (mouseX>900 && mouseX<1100 && mouseY>y-100 && mouseY<y+100){
+		poing = poing +1;
+	}
+	if (mouseX>0 && mouseX<200 && mouseY>y-300 && mouseY<y-100){
+		poing = poing +1;
+	}
+	if (mouseX>400 && mouseX<600 && mouseY>y-600 && mouseY<y-400){
+		poing = poing +1;
+	}
+	if (mouseX>1150 && mouseX<1350 && mouseY>y-850 && mouseY<y-650){
+		poing = poing +1;
+	}
+	if (mouseX>100 && mouseX<300 && mouseY>y-1300 && mouseY<y-1100){
+		poing = poing +1;
+	}
+	
+}
+
+
+/* CUSTOM FUNCTIONS FOR P5LIVE */
+// keep fullscreen if window resized
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+// custom ease function
+function ease(iVal, oVal, eVal){
+	return oVal += (iVal - oVal) * eVal;
+}
+
+// processing compatibility
+function println(msg){
+	print(msg);
+}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rpv20</title>
+	<meta charset="utf-8">
+	<!-- Compiled w/ P5LIVE, http://github.com/ffd8/p5live -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+	<style type="text/css">
+		body{
+			margin:0;
+			overflow:hidden;
+		}
+		canvas{
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:-1;
+			width:100vw;
+			height:100vh;
+			margin:0;
+		}
+	</style>
+	<script type="text/javascript">
+		// eco-mode = only render if window focused
+		window.onblur = function () {
+			noLoop()
+		}
+		window.onfocus = function () {
+			loop();
+		}
+	</script>
+<script type="text/javascript">
+//rpv20
+
+//Billeder
+let Tur;
+let tree;
+let stw;
+function preload(){
+  tree = createImg("https://github.com/mpsteenstrup/GCP4/blob/master/FN_maal/Tree.png?raw=true");
+  Tur = createImg('https://github.com/mpsteenstrup/GCP4/blob/master/FN_maal/Turtle.png?raw=true');
+  stw = createImg('https://github.com/mpsteenstrup/GCP4/blob/master/FN_maal/straws.png?raw=true');
+  tree.hide();
+  Tur.hide();
+  stw.hide();
+
+}
+//Globale variabler
+
+  //Turtle var
+  var xPosT = 375;
+  var yPosT = 735;
+  var move = 0;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  angleMode(DEGREES);
+}
+function baggrund() {
+  // Himmel
+  background(0,160,255);
+
+  // Jord
+  //noStroke();
+  fill(39,209,99);
+  rect(0,400,2000,1600);
+
+  /*
+  //Træ kordinater
+  var xPosT = 200;
+  var yPosT = 275;
+
+  //Stamme
+  fill(150, 100, 25);
+  rect(xPosT, yPosT, 40, 200);
+
+  //Blade
+  fill(50, 200, 50);
+  translate(xPosT+20, yPosT);
+  rotate(-55);
+  for (let i = 0; i < 20; i++) {
+    ellipse(-50, 0, 100, 25);
+    rotate(15);
+  }
+  rotate(-245);
+  translate(0,0);
+  */
+
+  //Træ Kordinater
+  var wPosPT = tree.width;
+  var hPosPT = tree.height;
+  var xPosPT = 100;
+  var yPosPT = 50;
+  //Træ
+  image(tree, xPosPT ,yPosPT, wPosPT/1.5, hPosPT/1.5)
+  push();
+  translate(wPosPT,0);
+  scale(-1,1);
+  image(tree, -xPosPT*3 ,yPosPT*1.9, wPosPT/1.7, hPosPT/1.7);
+  pop();
+}
+function setup() {
+  createCanvas(800, 800);
+  angleMode(DEGREES);
+}
+function turtle_game() {
+
+  background(0,40,255);
+  //Walls / lines
+  stroke(0 ,160, 50);
+  strokeWeight(5);
+
+  //Walls
+  push();
+  fill(0,0,0);
+  noStroke();
+  rect(0, 0, 375, 25);
+  rect(0, 0, 25, 400);
+  rect(0, 775, 375, 25);
+  rect(0, 450, 25, 375);
+  rect(775, 450, 25, 375);
+  rect(425, 775, 375, 25);
+  rect(425, 0, 800, 25);
+  rect(775, 0, 25, 400);
+  pop();
+
+  //midle box
+  push();
+  noStroke();
+  rect(350, 400, 100, 50);
+  pop();
+  line(350, 450, 450, 450);
+  line(350, 450, 350, 400);
+  line(450, 450, 450, 400);
+  line(350, 400, 375, 400);
+  line(425, 400, 450, 400);
+
+  //rect over middle box
+  rect(375,75, 50, 275);
+
+  // upper L to the left of pillar
+  push();
+  noStroke();
+  rect(75, 75, 250, 50);
+  rect(275, 75, 50, 275);
+  pop();
+  line(75, 75, 325, 75);
+  line(325, 75, 325, 350);
+  line(325, 350, 275, 350);
+  line(275, 350, 275, 125);
+  line(275, 125, 75, 125);
+  line(75, 125, 75, 75);
+
+  // upper L to the right of pillar
+  push();
+  noStroke();
+  rect(475, 75, 250, 50);
+  rect(475, 75, 50, 275);
+  pop();
+  line(475, 75, 725, 75);
+  line(725, 75, 725, 125);
+  line(725, 125, 525, 125);
+  line(525, 125, 525, 350);
+  line(525, 350, 475, 350);
+  line(475, 350, 475, 75);
+
+  // upper left and right box
+  rect(75, 175, 150, 175);
+  rect(575, 175, 150, 175);
+
+  //Left and right line
+  rect(75, 400, 200, 50);
+  rect(525, 400, 200, 50);
+
+  // lower left and right box
+  rect(75, 500, 150, 125);
+  rect(575, 500, 150, 125);
+
+  // lower L to the left of pillar
+  push();
+  noStroke();
+  rect(75, 675, 250, 50);
+  rect(275, 500, 50, 225);
+  pop();
+  line(75, 725, 325, 725);
+  line(325, 725, 325, 500);
+  line(325, 500, 275, 500);
+  line(275, 500, 275, 675);
+  line(275, 675, 75, 675);
+  line (75, 675, 75, 725);
+
+  // upper L to the right of pillar
+  push();
+  noStroke();
+  rect(475, 675, 250, 50);
+  rect(475, 500, 50, 225);
+  pop();
+  line(475, 725, 725, 725);
+  line(725, 725, 725, 675);
+  line(725, 675, 525, 675);
+  line(525, 675, 525, 500);
+  line(525, 500, 475, 500);
+  line(475, 500, 475, 725);
+
+  //rect under middle box
+  rect(375,500, 50, 225);
+
+  //Turtle Kordinater
+  var wPosT = Tur.width;
+  var hPosT = Tur.height;
+  //Turtle
+
+  translate(xPosT+8+17,yPosT+17)
+  if (move==2){
+      rotate(180);
+    } else if (move==3){
+      rotate(270);
+    } else if (move == 4){
+    rotate(90)
+  }
+
+  image(Tur, -17 ,-17, wPosT/5, hPosT/5);
+}
+function turtle_hit_wall() {
+//Rect under box
+  if (xPosT+8 > 380 && xPosT+8 < 425 && yPosT < 725 && yPosT > 480 || xPosT+8+34 > 380 && xPosT+8+34 < 425 && yPosT < 725 && yPosT > 480) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 375 && xPosT+8 < 425 && yPosT < 725 && yPosT > 475 || xPosT+8+34 > 375 && xPosT+8+34 < 425 && yPosT < 725 && yPosT > 475) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  }
+//Rect over box
+  if (xPosT+8 > 380 && xPosT+8 < 425 && yPosT < 350 && yPosT > 55 || xPosT+8+34 > 380 && xPosT+8+34 < 425 && yPosT < 350 && yPosT > 55) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  }if (xPosT+8 > 375 && xPosT+8 < 425 && yPosT < 345 && yPosT > 45 || xPosT+8+34 > 375 && xPosT+8+34 < 425 && yPosT < 345 && yPosT > 45) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  }
+//Left line
+  if (xPosT+8 > 80 && xPosT+8 < 310 && yPosT < 380 && yPosT > 450 || xPosT+8+34 > 80 && xPosT+8+34 < 310 && yPosT > 380 && yPosT < 450) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 75 && xPosT+8 < 300 && yPosT < 370 && yPosT > 445 || xPosT+8+34 > 75 &&       xPosT+8+34 < 300 && yPosT > 370 && yPosT < 445) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  }
+
+  //right line
+  if (xPosT+8 > 530 && xPosT+8 < 760 && yPosT < 380 && yPosT > 450 || xPosT+8+34 > 530 && xPosT+8+34 < 760 && yPosT > 380 && yPosT < 450) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 525 && xPosT+8 < 750 && yPosT < 370 && yPosT > 445 || xPosT+8+34 > 525 &&       xPosT+8+34 < 750 && yPosT > 370 && yPosT < 445) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  }
+
+    //box
+  if (xPosT+8 > 350 && xPosT+8 < 485 && yPosT < 380 && yPosT > 450 || xPosT+8+34 > 350 && xPosT+8+34 < 485 && yPosT > 380 && yPosT < 450) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 345 && xPosT+8 < 485 && yPosT < 370 && yPosT > 445 || xPosT+8+34 > 345 &&       xPosT+8+34 < 485 && yPosT > 370 && yPosT < 445) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  }
+  //Left lower L
+  if (xPosT+8 > 280 && xPosT+8 < 325 && yPosT < 725 && yPosT > 480 || xPosT+8+34 > 280 && xPosT+8+34 < 325 && yPosT < 725 && yPosT > 480) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 275 && xPosT+8 < 325 && yPosT < 725 && yPosT > 475 || xPosT+8+34 > 275 && xPosT+8+34 < 325 && yPosT < 725 && yPosT > 475) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  } if (xPosT+8 > 80 && xPosT+8 < 310 && yPosT < 655 && yPosT > 725 || xPosT+8+34 > 80 && xPosT+8+34 < 310 && yPosT > 655 && yPosT < 725) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 75 && xPosT+8 < 300 && yPosT < 645 && yPosT > 720 || xPosT+8+34 > 75 &&       xPosT+8+34 < 300 && yPosT > 645 && yPosT < 720) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  }
+  //lower right L
+  if (xPosT+8 > 480 && xPosT+8 < 525 && yPosT < 725 && yPosT > 480 || xPosT+8+34 > 480 && xPosT+8+34 < 525 && yPosT < 725 && yPosT > 480) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 475 && xPosT+8 < 525 && yPosT < 725 && yPosT > 475 || xPosT+8+34 > 475 && xPosT+8+34 < 525 && yPosT < 725 && yPosT > 475) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  } if (xPosT+8 > 530 && xPosT+8 < 760 && yPosT < 655 && yPosT > 725 || xPosT+8+34 > 530 && xPosT+8+34 < 760 && yPosT > 655 && yPosT < 725) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 525 && xPosT+8 < 750 && yPosT < 645 && yPosT > 720 || xPosT+8+34 > 525 &&       xPosT+8+34 < 750 && yPosT > 645 && yPosT < 720) {
+    move = 0;
+    yPosT -= 2;
+    xPosT += 2;
+  }
+    //Left upper L
+  if (xPosT+8 > 280 && xPosT+8 < 325 && yPosT < 350 && yPosT > 55 || xPosT+8+34 > 280 && xPosT+8+34 < 325 && yPosT < 350 && yPosT > 55) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  }if (xPosT+8 > 275 && xPosT+8 < 325 && yPosT < 345 && yPosT > 45 || xPosT+8+34 > 275 && xPosT+8+34 < 325 && yPosT < 345 && yPosT > 45) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  } if (xPosT+8 > 80 && xPosT+8 < 310 && yPosT < 50 && yPosT > 125 || xPosT+8+34 > 80 && xPosT+8+34 < 310 && yPosT > 50 && yPosT < 125) {
+    move = 0;
+    yPosT += 2;
+    xPosT -= 2;
+  } if (xPosT+8 > 75 && xPosT+8 < 300 && yPosT < 40 && yPosT > 120 || xPosT+8+34 > 75 &&       xPosT+8+34 < 300 && yPosT > 40 && yPosT < 120) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  }
+      //Right upper L
+  if (xPosT+8 > 480 && xPosT+8 < 525 && yPosT < 350 && yPosT > 55 || xPosT+8+34 > 480 && xPosT+8+34 < 525 && yPosT < 350 && yPosT > 55) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  }if (xPosT+8 > 475 && xPosT+8 < 525 && yPosT < 345 && yPosT > 45 || xPosT+8+34 > 475 && xPosT+8+34 < 525 && yPosT < 345 && yPosT > 45) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  } if (xPosT+8 > 530 && xPosT+8 < 760 && yPosT < 50 && yPosT > 125 || xPosT+8+34 > 530 && xPosT+8+34 < 760 && yPosT > 50 && yPosT < 125) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 525 && xPosT+8 < 750 && yPosT < 40 && yPosT > 120 || xPosT+8+34 > 525 &&       xPosT+8+34 < 750 && yPosT > 40 && yPosT < 120) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  }
+  //left upper rect
+  if (xPosT+8 > 80 && xPosT+8 < 260 && yPosT < 145 && yPosT > 355 || xPosT+8+34 > 80 && xPosT+8+34 < 260 && yPosT > 145 && yPosT < 355) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 75 && xPosT+8 < 250 && yPosT < 140 && yPosT > 350 || xPosT+8+34 > 75 &&       xPosT+8+34 < 250 && yPosT > 140 && yPosT < 350) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  }
+    //right upper rect
+  if (xPosT+8 > 580 && xPosT+8 < 760 && yPosT < 145 && yPosT > 355 || xPosT+8+34 > 580 && xPosT+8+34 < 760 && yPosT > 145 && yPosT < 355) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 575 && xPosT+8 < 750 && yPosT < 140 && yPosT > 350 || xPosT+8+34 > 575 &&       xPosT+8+34 < 750 && yPosT > 140 && yPosT < 350) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  }
+    //left lower rect
+  if (xPosT+8 > 80 && xPosT+8 < 225 && yPosT < 625 && yPosT > 480 || xPosT+8+34 > 80 && xPosT+8+34 < 225 && yPosT < 625 && yPosT > 480) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 75 && xPosT+8 < 220 && yPosT < 620 && yPosT > 475 || xPosT+8+34 > 75 &&       xPosT+8+34 < 220 && yPosT < 620 && yPosT > 475) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  }
+  //right lower rect
+  if (xPosT+8 > 580 && xPosT+8 < 726 && yPosT < 625 && yPosT > 480 || xPosT+8+34 > 580 && xPosT+8+34 < 726 && yPosT < 625 && yPosT > 480) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+  } if (xPosT+8 > 575 && xPosT+8 < 720 && yPosT < 620 && yPosT > 475 || xPosT+8+34 > 575 &&       xPosT+8+34 < 720 && yPosT < 620 && yPosT > 475) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+  }
+  //walls
+  //left upper poal
+    if (xPosT+8 > -10 && xPosT+8 < 25 && yPosT > -10 && yPosT < 400 || xPosT+8+34 > 0 && xPosT+8+34 < 25 && yPosT > 0 && yPosT < 400) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+    }
+  //Right upper poal
+    if (xPosT+8 > 775 && xPosT+8 < 810 && yPosT > 0 && yPosT < 400 || xPosT+8+34 > 775 && xPosT+8+34 < 810 && yPosT > 0 && yPosT < 400) {
+    move = 0;
+    yPosT += 2;
+    xPosT -= 2;
+    }
+    //left lower poal
+    if (xPosT+8 > -10 && xPosT+8 < 25 && yPosT > 420 && yPosT < 800 || xPosT+8+34 > -10 && xPosT+8+34 < 25 && yPosT > 420 && yPosT < 800) {
+    move = 0;
+    yPosT -= 2;
+    xPosT += 2;
+    }
+  //Right lower poal
+    if (xPosT+8 > 775 && xPosT+8 < 810 && yPosT > 420 && yPosT < 800 || xPosT+8+34 > 775 && xPosT+8+34 < 810 && yPosT > 420 && yPosT < 800) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+    }
+    //Left upper stick
+    if (xPosT+8 > 0 && xPosT+8 < 375 && yPosT > -20 && yPosT < 25 || xPosT+8+34 > 0 && xPosT+8+34 < 375 && yPosT > -20 && yPosT < 25) {
+    move = 0;
+    yPosT += 2;
+    xPosT += 2;
+    }
+    //Right upper stick
+    if (xPosT+8 > 425 && xPosT+8 < 800 && yPosT > -20 && yPosT < 25 || xPosT+8+34 > 425 && xPosT+8+34 < 800 && yPosT > -20 && yPosT < 25) {
+    move = 0;
+    yPosT += 2;
+    xPosT -= 2;
+    }
+    //Left upper stick
+    if (xPosT+8 > 0 && xPosT+8 < 375 && yPosT > 745 && yPosT < 820 || xPosT+8+34 > 0 && xPosT+8+34 < 375 && yPosT > 745 && yPosT < 820) {
+    move = 0;
+    yPosT -= 2;
+    xPosT += 2;
+    }
+    //Right upper stick
+    if (xPosT+8 > 425 && xPosT+8 < 800 && yPosT > 745 && yPosT < 820 || xPosT+8+34 > 425 && xPosT+8+34 < 800 && yPosT > 745 && yPosT < 820) {
+    move = 0;
+    yPosT -= 2;
+    xPosT -= 2;
+    }
+    //Teleports
+    if (xPosT+8 < 0 || xPosT+8+34 < 0) {
+    xPosT = xPosT+800
+    } if (xPosT+8 > 800 || xPosT+8+34 > 800) {
+    xPosT = xPosT-800
+    } if (yPosT+8 < 0 || xPosT+8+34 < 0) {
+    yPosT = yPosT+800
+    } if (yPosT+8 > 800 || xPosT+8+34 > 800) {
+    yPosT = yPosT-800
+    }
+}
+function turtle_move() {
+   if (move==1){
+      yPosT -= 2
+    } else if (move==2){
+      yPosT += 2
+    }
+  if (move == 3){
+    xPosT -= 2
+  } else if (move == 4){
+    xPosT += 2
+  }
+}
+function straws() {
+  //straws Kordinater
+  var wPosS = stw.width;
+  var hPosS = stw.height;
+  //Turtle
+
+  translate(xPosS+8+17,yPosS+17)
+  if (moveS==2){
+      rotate(180);
+    } else if (moveS==3){
+      rotate(270);
+    } else if (moveS== 4){
+    rotate(90)
+  }
+
+  image(stw, 0 ,0, wPosS/5, hPosT/5);
+}
+
+function draw() {
+  baggrund();
+  turtle_game();
+  turtle_move();
+  turtle_hit_wall();
+}
+function keyPressed() {
+    if (keyCode === UP_ARROW) {
+      move = 1;
+    } else if (keyCode === DOWN_ARROW) {
+      move = 2;
+    }
+    if (keyCode === LEFT_ARROW) {
+      move = 3;
+    } else if (keyCode === RIGHT_ARROW) {
+      move = 4;
+    }
+
+}
+
+
+/* CUSTOM FUNCTIONS FOR P5LIVE */
+// keep fullscreen if window resized
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+// custom ease function
+function ease(iVal, oVal, eVal){
+	return oVal += (iVal - oVal) * eVal;
+}
+
+// processing compatibility
+function println(msg){
+	print(msg);
+}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

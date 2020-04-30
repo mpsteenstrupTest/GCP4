@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>knbpw</title>
+	<meta charset="utf-8">
+	<!-- Compiled w/ P5LIVE, http://github.com/ffd8/p5live -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+	<style type="text/css">
+		body{
+			margin:0;
+			overflow:hidden;
+		}
+		canvas{
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:-1;
+			width:100vw;
+			height:100vh;
+			margin:0;
+		}
+	</style>
+	<script type="text/javascript">
+		// eco-mode = only render if window focused
+		window.onblur = function () {
+			noLoop()
+		}
+		window.onfocus = function () {
+			loop();
+		}
+	</script>
+<script type="text/javascript">
+//knbpw
+
+{
+let img;
+
+function preload(){
+  img = createImg('https://upload.wikimedia.org/wikipedia/commons/3/31/A_large_blank_world_map_with_oceans_marked_in_blue-edited.png','');
+	img.hide();
+  billed = createImg('https://isab3969.wixsite.com/rwandafrem2','');
+    billed.hide(); 
+}
+
+function setup(){
+  createCanvas(windowWidth, windowHeight);
+  image(img,0,0,windowWidth,windowHeight);
+}
+
+draw = function() {
+    fill(100, 100, 68); // start color
+    if (mouseIsPressed && mouseX < 1120 && mouseX > 1040 && mouseY < 370 && mouseY > 300) { 
+        fill(33, 112, 52); // click color
+    }
+     if (mouseIsPressed && mouseX < 810 && mouseX > 740 && mouseY > 450 && mouseY > 370){
+     	fill(33, 112, 52);
+    }
+    ellipse(1095, 330, 20, 20);  // the button
+    ellipse(770, 418, 20, 20);
+    ellipse(370, 460,20, 20);
+    if (mouseIsPressed && mouseX < 1120 && mouseX > 1040 && mouseY < 370 && mouseY > 300){
+    	text("dette er Thailand", 910,330);
+    	text("Thailand i Sydøstasien har kæmpet hårdt for at prøve at opfylde verdensmålene, hvilket har", 910, 342);
+    	text("resulteret i, at det nu rangerer som det 40. mest succesfulde land i forhold til at opnå disse" , 910, 354); 
+    	text("mål, i blandt 162 lande. De har især haft held inden for verdensmål nummer 1: udryd", 910, 366);
+    	text("fattigdom, som de gennem et højt fokus på området har klaret fuldstændigt. Et andet mål", 910, 378);
+    	text("hvor de har set stor succes, dog ikke helt så meget, er mål nr. 4: lige adgang til", 910, 390);
+    	text("kvalitetsuddannelse. Der er stadig et stykke igen, men det er ikke meget. Det eneste de her", 910, 402);
+    	text("virkelig mangler er at hæve færdiggørelsesraten blandt højere uddannelser. Thailands største", 910, 414);
+    	text("problemer i forhold til de 17 mål ligger lige nu i målene 3, 10, 13 og 14, som er sundhed,", 910, 426);
+    	text("lighed, klima og livet under vand. De sidste to har man fra thailands side gjort en masse for at", 910, 438);
+    	text("forbedre. Man har bl.a. sørget for oprettelsen af beskyttede områder for landets tigerbestand", 910, 450);
+    	text("for at hjælpe den med at vokse. Samtidig har de slået hårdt ned på ulovligt fiskeri og", 910, 462);
+    	text("dyremishandlingen i den berygtede elefant turisme. Sammen med Vietnam, Hawaii og andre", 910, 474);
+    	text("nationer i regionen er de desuden begyndt at forbyde meget af den engangs plastik, der", 910, 486);
+    	text("forurener havet. I stedet for at bruge det skadelige materiale, har man valgt at udskifte det", 910, 498);
+    	text("med andre mere klimavenlige alternativer  f.eks. ved at bruge bananblade som emballage.", 910, 510);
+   }
+    
+
+    	fill(255,255,255)
+    	noStroke(){
+    	rect(590,420,580,180)
+    	}
+
+
+ouseY > 370){
+    	fill(255,255,255)
+    	noStroke(){
+    	rect(590,420,580,180)
+    	}
+    	fill(0,0,0)
+    	text("Dette er Rwanda. Landsbyen Rubaya i Rwanda har arbejdet intenst for at opfylde verdensmål:",600,437);
+		text("-nr. 8: Anstændige jobs og økonomisk vækst",600,449);
+		text("-nr. 11: Bæredygtige byer og lokalsamfund",600,461);
+		text("-nr. 13: Klimaindsats",600,473);
+		text("-og nr. 15: Livet på land",600,485);
+		text("Disse mål har de opfyldt ved at implementere biogassystem, plantning af træer på bjergskråninger",600,497); 
+	   }t("og regnvandsindsamling. Biogassystemet sørger for at landsbyen generelt er bæredygtig, da biogassen",600,509); 
+		text("bliver brugt til lys og køkken af alle beboerne, hvor biogasresterne bruges til gødning på marker.",600,521); 
+		text("Plantningen af træerne og indførelsen af biogassystemet resulterer i bedre levevilkår for landbrugsjorden.",600,532); 
+		text("Regnvandsindsamlingen gør så landsbyens piger ikke skal gå 5 km efter vand og altså har mere tid til",600,545); 
+		text("skole og lektier. Disse simple løsninger har givet landsbyen et overskud på 26.000 US dollars.",600,567);
+		text("https://verdensbedstenyheder.dk/nyheder/rwandas-groenne-landsby-viser-vej/",600,579);
+    	
+    }
+	}
+    if (mouseIsPressed && mouseX < 410 && mouseX > 330 && mouseY < 500 && mouseY > 420){
+    	
+    	fill(0,0,0);
+    	text("Dette er ...", 400, 460)
+    }
+    
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CUSTOM FUNCTIONS FOR P5LIVE */
+// keep fullscreen if window resized
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+// custom ease function
+function ease(iVal, oVal, eVal){
+	return oVal += (iVal - oVal) * eVal;
+}
+
+// processing compatibility
+function println(msg){
+	print(msg);
+}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

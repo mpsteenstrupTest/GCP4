@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>xlfeh</title>
+	<meta charset="utf-8">
+	<!-- Compiled w/ P5LIVE, http://github.com/ffd8/p5live -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+	<style type="text/css">
+		body{
+			margin:0;
+			overflow:hidden;
+		}
+		canvas{
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:-1;
+			width:100vw;
+			height:100vh;
+			margin:0;
+		}
+	</style>
+	<script type="text/javascript">
+		// eco-mode = only render if window focused
+		window.onblur = function () {
+			noLoop()
+		}
+		window.onfocus = function () {
+			loop();
+		}
+	</script>
+<script type="text/javascript">
+//xlfeh
+
+function setup() {
+	createCanvas(windowWidth,windowHeight);
+	
+}
+
+function preload(){
+	world=loadImage('https://upload.wikimedia.org/wikipedia/commons/2/27/Wkipedia_blank_world_map.jpg');
+}
+
+function knap(name,countryX,countryY,fattigdom,sult,alfabet,vand,skov){
+	fill(0,100,0);
+	circle(countryX,countryY,12);
+	if(mouseX>countryX-6&&mouseX<countryX+6&&mouseY>countryY-6&&mouseY<countryY+6){
+		info(name,fattigdom,sult,alfabet,vand,skov,countryX);
+		}
+}
+
+function info(name,fattigdom,sult,alfabet,vand,skov,countryX){
+	var right = 0;
+	if(countryX>713){
+		right=900;
+	}
+	fill(255,255,255);
+	rect(1000-right,110,340,400);
+	fill(0,0,0);
+	textSize(30);
+	text(name,1020-right,155);
+	fill(0,0,100);
+	textSize(14);
+	text("(1) % af befolkningen ikke i absolut fattigdom",1020-right,185);
+	text("(2) Landets sult indeks - 100 er bedst",1020-right,255);
+	text("(4) % af befolkningen med alfebetisme", 1020-right, 325);
+	text("(5) % af befolkningen med rent vand og sanitet",1020-right,395);
+	text("(15) % skovområde ud af samlet landområde",1020-right,465);
+	fill(255,255,255);
+	rect(1020-right,190,300,20);
+	rect(1020-right,260,300,20);
+	rect(1020-right,330,300,20);
+	rect(1020-right,400,300,20);
+	rect(1020-right,470,300,20);
+	fill(230,0,10);
+	rect(1020-right,190,fattigdom*3,20);
+	fill(218,165,32);
+	rect(1020-right,260,sult*3,20);
+	fill(175,0,42);
+	rect(1020-right,330,alfabet*3,20);
+	fill(81,181,242);
+	rect(1020-right,400,vand*3,20);
+	fill(57,255,20);
+	rect(1020-right,470,skov*3,20);
+}
+
+
+function draw() {
+	image(world,0,0);
+	
+	//knapper
+	textSize(20);
+	knap("Rusland",950,90,100,94.2,99.7,87.7,49.76);
+	knap("Kina",1050,210,99.5,94.4,99.51,77.8,22.1);
+	knap("Indien",960,260,78.8,69.7,69.3,88,23.77);
+	knap("Dem. Rep. Congo",735,375,23.4,0,77,55.7,67.3);
+	knap("Saudi Arabien",820,255,0,91.5,94.4,84.5,0.45);
+	knap("Japan",1180,200,98.8,99,99,98.5,68.46);
+	knap("Sydafrika",735,500,81.1,86,94.4,79.5,7.62);
+	knap("Mexico",220,260,97.5,93.8,94.9,56.12,34);
+	knap("New Zealand",1300,555,0,99,99,100,38.56);
+	knap("Syrien",810,210,31,0,0,80.8,2.67);
+	knap("USA",260,190,1.2,2,5.74,10.5,33.9);
+	knap("Brasilien",420,410,4.8,5.3,31.63,92,59.05);
+	knap("Frankrig",650,155,0,0,7.3,0,31.03);
+	knap("Sverige",696,90,0.5,0,4.87,0,68.92);
+	knap("Danmark",680,114,0.2,0,0,5.03,14.58);
+}
+
+/* CUSTOM FUNCTIONS FOR P5LIVE */
+// keep fullscreen if window resized
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+// custom ease function
+function ease(iVal, oVal, eVal){
+	return oVal += (iVal - oVal) * eVal;
+}
+
+// processing compatibility
+function println(msg){
+	print(msg);
+}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

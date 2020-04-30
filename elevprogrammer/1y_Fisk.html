@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>h5ixn</title>
+	<meta charset="utf-8">
+	<!-- Compiled w/ P5LIVE, http://github.com/ffd8/p5live -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+	<style type="text/css">
+		body{
+			margin:0;
+			overflow:hidden;
+		}
+		canvas{
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:-1;
+			width:100vw;
+			height:100vh;
+			margin:0;
+		}
+	</style>
+	<script type="text/javascript">
+		// eco-mode = only render if window focused
+		window.onblur = function () {
+			noLoop()
+		}
+		window.onfocus = function () {
+			loop();
+		}
+	</script>
+<script type="text/javascript">
+//h5ixn
+
+function setup() {
+	createCanvas(1000, 1000);
+	background(5,151,225);
+}
+var xpos=0
+var ypos=0
+var xpos2=-600
+var ypos2=-600
+
+var badex=200
+var badey=800
+var badex2=-1000
+var badey2=2000
+var badex3=-2200
+var badey3=3200
+
+var cigposX=950
+var cigposY=650
+
+
+function draw() {
+
+background(5,151,225);
+
+//skrald//
+fill(1000,1000,1000)
+rect(xpos,ypos,30,20)
+rect(xpos,ypos-10,30,10)
+fill(0,0,0)
+rect(xpos,ypos,30,2)
+fill(1000)
+arc(xpos+15,ypos-10,25,25,3.14159256,0);
+
+fill(5,151,225)
+arc(xpos+15,ypos-10,20,20,3.14159256,0)
+var xspeed=0.1*random(1,30)
+var yspeed=0.1*random(1,30)
+ypos=ypos+yspeed
+xpos=xpos+xspeed
+if(xpos>1000){xpos=0}
+if(ypos>1000){ypos=0}
+fill(1000,0,0)
+if(xpos<mouseX+45&&xpos>mouseX-55&&ypos<mouseY+30&&ypos>mouseY-30){
+textSize(100)
+text("Du er endt som en af",00,100)	
+text("de mange, mange",00,210)
+text("millioner fisk som",00,320)
+text("hvert år dør som",00,430)
+text("følge af indtag af",00,540)
+text("plastik",00,650)
+}
+//skrald//
+
+//fisk
+noStroke()
+fill(181,6,64)
+ellipse(mouseX,mouseY,100,50);
+ellipse(mouseX+60,mouseY,30,60);
+fill(350,350,350);
+ellipse(mouseX-20,mouseY-5,20,20);
+fill(0,0,0);
+ellipse(mouseX-25,mouseY-6,10,10);
+fill(125,0,0);
+ellipse(mouseX+20,mouseY,30,15);
+ellipse(mouseX+55,mouseY,20,40);
+ellipse(mouseX-43,mouseY+5,10,5);
+//fisk
+
+//bund
+fill(199, 135, 8);
+noStroke();
+rect(0,720,windowWidth,70);
+//bund
+
+//havplante
+fill(2,120,2);
+ellipse(900,700,25,100);
+ellipse(888,650,15,60);
+ellipse(910,650,10,40);
+ellipse(880,625,8,32);
+ellipse(913,628,5,20);
+
+fill(82,50,2);
+ellipse(500,767,10,10);
+
+fill(700,193,181);
+ellipse(700,750,5,5);
+//havplante
+
+//havbund//
+ellipse
+
+//version2skattekiste
+fill(168, 100, 16);
+ellipse(150,700,175,100);
+rect(63,700,175,70);
+fill(237, 223, 66);
+ellipse(150,710,25,25);
+rect(63,705,175,10)
+rect(143,650,15,50)
+rect(63,760,175,10)
+rect(63,710,10,60)
+rect(228,710,10,60)
+
+//cigaret// 
+fill(242, 242, 242);
+rect(cigposX,cigposY,100,15);
+
+fill(255, 138, 13);
+rect(cigposX-19,cigposY,30,15);
+ 
+fill(240, 176, 87);
+ellipse(cigposX-1,cigposY+4,3,3);
+ellipse(cigposX-10,cigposY+10,3,5);
+ellipse(cigposX+5,cigposY+10,2,4)
+cigposX=cigposX-0.1*random(1,30)
+cigposY=cigposY-0.1*random(1,30)
+if(cigposX<0){cigposX=1000}
+if(cigposY<0){cigposY=1000}
+fill(1000,0,0)
+if(cigposX<mouseX+85&&cigposX>mouseX-275&&cigposY<mouseY+30&&cigposY>mouseY-30){
+textSize(100)
+text("Du er endt som en af",00,100)	
+text("de mange, mange",00,210)
+text("millioner fisk som",00,320)
+text("hvert år dør som",00,430)
+text("følge af indtag af",00,540)
+text("plastik",00,650)
+}
+//cigaret//
+
+//badering//
+fill(204, 8, 191);
+ellipse(badex,badey,80,80);
+fill(5,151,225);
+ellipse(badex,badey,30,30);
+var badespeed=0.1*random(1,30)
+badex=badex+badespeed
+badey=badey-badespeed
+if (badex>1000){badex=0}
+if (badey<0){badey=800}
+fill(1000,0,0)
+if(badex<mouseX+45&&badex>mouseX-55&&badey<mouseY+30&&badey>mouseY-30){
+textSize(100)
+text("Du er endt som en af",00,100)	
+text("de mange, mange",00,210)
+text("millioner fisk som",00,320)
+text("hvert år dør som",00,430)
+text("følge af indtag af",00,540)
+text("plastik",00,650)
+}
+
+//badering2//
+fill(204, 8, 191);
+ellipse(badex2,badey2,80,80);
+fill(5,151,225);
+ellipse(badex2,badey2,30,30);
+var badespeed=0.1*random(1,30)
+badex2=badex2+badespeed
+badey2=badey2-badespeed
+if (badex2>1000){badex2=0}
+if (badey2<0){badey2=800}
+fill(1000,0,0)
+if(badex2<mouseX+45&&badex2>mouseX-55&&badey2<mouseY+30&&badey2>mouseY-30){
+textSize(100)
+text("Du er endt som en af",00,100)	
+text("de mange, mange",00,210)
+text("millioner fisk som",00,320)
+text("hvert år dør som",00,430)
+text("følge af indtag af",00,540)
+text("plastik",00,650)
+}
+//badering3//
+fill(204, 8, 191);
+ellipse(badex3,badey3,80,80);
+fill(5,151,225);
+ellipse(badex3,badey3,30,30);
+var badespeed=0.1*random(1,30)
+badex3=badex3+badespeed
+badey3=badey3-badespeed
+if (badex3>1000){badex3=0}
+if (badey3<0){badey3=800}
+fill(1000,0,0)
+if(badex3<mouseX+45&&badex3>mouseX-55&&badey3<mouseY+30&&badey3>mouseY-30){
+textSize(100)
+text("Du er endt som en af",00,100)	
+text("de mange, mange",00,210)
+text("millioner fisk som",00,320)
+text("hvert år dør som",00,430)
+text("følge af indtag af",00,540)
+text("plastik",00,650)
+}
+}
+
+
+
+var fisk=mouseX+mouseY;
+
+/* CUSTOM FUNCTIONS FOR P5LIVE */
+// keep fullscreen if window resized
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+// custom ease function
+function ease(iVal, oVal, eVal){
+	return oVal += (iVal - oVal) * eVal;
+}
+
+// processing compatibility
+function println(msg){
+	print(msg);
+}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
